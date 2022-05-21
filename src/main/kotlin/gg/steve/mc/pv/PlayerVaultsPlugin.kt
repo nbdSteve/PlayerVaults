@@ -1,18 +1,16 @@
 package gg.steve.mc.pv
 
+import gg.steve.mc.pv.component.DaggerEventListenerComponent
 import org.bukkit.plugin.java.JavaPlugin
 
 class PlayerVaultsPlugin : JavaPlugin() {
 
-    override fun onLoad() {
-        super.onLoad();
-    }
-
     override fun onEnable() {
-        super.onEnable();
+        // Register events
+        this.registerListeners()
     }
 
-    override fun onDisable() {
-        super.onDisable();
+    private fun registerListeners() {
+        DaggerEventListenerComponent.create().manager().register(this)
     }
 }

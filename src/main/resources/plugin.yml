@@ -1,0 +1,7 @@
+name: PlayerVaults
+version: ${project.version}
+main: gg.steve.mc.pv.PlayerVaultsPlugin
+api-version: 1.18
+prefix: PlayerVaults
+description: A custom spigot plugin built off of the SPlugin framework developed by Steve Goodhill for steve.gg development.
+website: https://steve.gg/mc/SPlugin
