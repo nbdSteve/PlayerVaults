@@ -8,7 +8,7 @@ import gg.steve.mc.pv.listener.EventListener
 import gg.steve.mc.pv.listener.JoinEventListener
 
 @Module
-interface EventListenersModule {
+interface EventListenerModule {
     @Binds
     @IntoMap
     @StringKey("Join")

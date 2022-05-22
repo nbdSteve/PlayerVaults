@@ -1,15 +1,18 @@
 package gg.steve.mc.pv.listener
 
-import gg.steve.mc.pv.PlayerVaultsPlugin
+import gg.steve.mc.pv.module.PlayerVaultsModule
 import org.bukkit.event.EventHandler
 import org.bukkit.event.player.PlayerJoinEvent
 import javax.inject.Inject
 
 class JoinEventListener @Inject
-constructor() : EventListener {
+constructor(
+    private val plugin: PlayerVaultsModule,
+) : EventListener {
 
-    override fun register(plugin: PlayerVaultsPlugin) {
-        plugin.server.pluginManager.registerEvents(this, plugin)
+    override fun register(): Boolean {
+        plugin.plugin.server.pluginManager.registerEvents(this, plugin.plugin)
+        return true
     }
 
     @EventHandler
